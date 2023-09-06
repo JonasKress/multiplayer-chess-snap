@@ -1,0 +1,36 @@
+name: multiplayer-chess # you probably want to 'snapcraft register <name>'
+base: core22 # the base snap is the execution environment for this snap
+version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: Multiplayer Chess - a chess variant with up to 6 players # 79 char long summary
+description: |
+  Multiplayer Chess is a chess variant with up to 6 players. While most of the rules are similar to classic chess some rules are different. 
+  
+  Possible Unit Moves
+  To see what moves are possible for a unit you can click a unit to see the possible moves appearing on the board. The possible moves of the green pawn appear as grey units. You   can also see the possible moves of your opponent by clicking on their units (they appear in the color of the opponent).
+  
+  Unit move patterns are equal to classical chess with the exception that pawns can also go backwards.
+  
+  Unit development
+  New units spawn next to the king (vertically and horizontally) when there is free space. The order of the units to be spawned is fixed or random depending on your game options.
+  This is the order of the pieces to be spawned
+  -Knight
+  -Bishop
+  -Rook
+  -Queen
+  
+  Players turn
+  You can see whose turn it is by two indicators
+    Clock icon on the players king
+    The king of the player whose turn it is displays a small clock icon
+    Players list overview
+    A jumping circle next to the player appears
+
+  https://multiplayer-chess.net
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  my-part:
+    # See 'snapcraft plugins'
+    plugin: nil
